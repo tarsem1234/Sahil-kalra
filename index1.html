@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script src="https://unpkg.com/vue"></script>
+<script>
+window.onload = function() {
+new Vue({
+el : "#app",
+data : {
+message : "hello world"
+}
+})
+
+var app5= new Vue ({
+el : "#app5",
+data : {
+          message : "click function"
+} ,
+methods : {
+       reversefunction : function()
+	   {
+	   this.message= "click is done";
+	   }
+}
+
+})
+}
+</script>
+</head>
+
+<body>
+<div id="app">
+<p> {{message}} </p></div>
+
+<div id="app5">
+<p>{{ message }}</p>
+<button v-on:click="reversefunction"> click me </button>
+</div>
+
+</body>
+</html>
